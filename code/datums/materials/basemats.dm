@@ -20,6 +20,7 @@
 	integrity_modifier = 0.1
 	sheet_type = /obj/item/stack/sheet/glass
 	ore_type = /obj/item/stack/ore/glass
+	shard_type = /obj/item/shard
 	value_per_unit = 0.0025
 	beauty_modifier = 0.05
 	armor_modifiers = list("melee" = 0.2, "bullet" = 0.2, "laser" = 0, "energy" = 1, "bomb" = 0, "bio" = 0.2, "rad" = 0.2, "fire" = 1, "acid" = 0.2)
@@ -99,6 +100,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/plasma
 	ore_type = /obj/item/stack/ore/plasma
+	shard_type = /obj/item/shard/plasma
 	value_per_unit = 0.1
 	beauty_modifier = 0.15
 	armor_modifiers = list("melee" = 1.4, "bullet" = 0.7, "laser" = 0, "energy" = 1.2, "bomb" = 0, "bio" = 1.2, "rad" = 1, "fire" = 0, "acid" = 0.5)
