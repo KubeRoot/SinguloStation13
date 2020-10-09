@@ -42,7 +42,7 @@
 /obj/machinery/mecha_part_fabricator/Initialize(mapload)
 	stored_research = new
 	matching_designs = list()
-	rmat = AddComponent(/datum/component/remote_materials, "mechfab", mapload && link_on_init)
+	rmat = AddComponent(/datum/component/remote_materials, "mechfab", mapload && link_on_init, breakdown_flags=BREAKDOWN_FLAGS_LATHE)
 	RefreshParts() //Recalculating local material sizes if the fab isn't linked
 	return ..()
 
