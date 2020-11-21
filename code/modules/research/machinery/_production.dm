@@ -26,7 +26,7 @@
 	stored_research = new
 	host_research = SSresearch.science_tech
 	update_research()
-	materials = AddComponent(/datum/component/remote_materials, "lathe", mapload, breakdown_flags=BREAKDOWN_FLAGS_LATHE)
+	materials = AddComponent(/datum/component/remote_materials, "lathe", mapload, mat_container_flags=BREAKDOWN_FLAGS_LATHE)
 	RefreshParts()
 
 /obj/machinery/rnd/production/Destroy()

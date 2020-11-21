@@ -25,16 +25,19 @@
 		use_amount_mat(sheet_amt * MINERAL_MATERIAL_AMOUNT, M)
 	return count
 
-/datum/component/material_container/crude/OnExamine(datum/source, mob/user)
-	//See? Totally ores now.
-	if(show_on_examine)
-		for(var/I in materials)
-			var/datum/material/M = I
-			var/amt = materials[I]
-			if(amt)
-				to_chat(user, "<span class='notice'>It has [amt] units of unrefined [lowertext(M.name)] stored.</span>")
+/datum/component/material_container/crude/on_examine(datum/source, mob/user, list/examine_texts)
+	SIGNAL_HANDLER
 
-/datum/component/material_container/crude/OnAttackBy(datum/source, obj/item/I, mob/living/user)
+	//See? Totally ores now.
+	for(var/I in materials)
+		var/datum/material/M = I
+		var/amt = materials[I]
+		if(amt)
+			examine_texts += "<span class='notice'>It has [amt] units of unrefined [lowertext(M.name)] stored.</span>"
+
+/datum/component/material_container/crude/on_attackby(datum/source, obj/item/I, mob/living/user)
+	SIGNAL_HANDLER
+
 	return //This container is specifically for ore, so no user filling.
 
 /*\
