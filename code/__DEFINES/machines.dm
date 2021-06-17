@@ -43,6 +43,7 @@
 #define LIMBGROWER		(1<<6) 	//Uses synthetic flesh
 #define SMELTER			(1<<7) 	//uses various minerals
 #define NANITE_COMPILER  (1<<8) //Prints nanite disks
+#define COMPONENT_PRINTER (1<<9) /// For wiremod/integrated circuits. Uses various minerals.
 //Note: More than one of these can be added to a design but imprinter and lathe designs are incompatable.
 
 //Modular computer/NTNet defines
